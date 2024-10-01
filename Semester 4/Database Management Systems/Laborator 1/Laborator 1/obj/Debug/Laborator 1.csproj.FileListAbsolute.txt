@@ -1,0 +1,10 @@
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\bin\Debug\Laborator_1.exe.config
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\bin\Debug\Laborator_1.exe
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\bin\Debug\Laborator_1.pdb
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator 1.csproj.AssemblyReference.cache
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator_1.Properties.Resources.resources
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator 1.csproj.GenerateResource.cache
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator 1.csproj.CoreCompileInputs.cache
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator_1.exe
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator_1.pdb
+C:\Users\oltya\Documents\Laboratoare Anul II\Semestrul II\SGBD\Laborator 1\Laborator 1\obj\Debug\Laborator_1.Form1.resources

@@ -1,0 +1,14 @@
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.AssemblyInfoInputs.cache
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.AssemblyInfo.cs
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.csproj.CoreCompileInputs.cache
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\bin\Debug\net8.0\Laborator 11.exe
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\bin\Debug\net8.0\Laborator 11.deps.json
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\bin\Debug\net8.0\Laborator 11.runtimeconfig.json
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\bin\Debug\net8.0\Laborator 11.dll
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\bin\Debug\net8.0\Laborator 11.pdb
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.dll
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\refint\Laborator 11.dll
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.pdb
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\Laborator 11.genruntimeconfig.cache
+C:\Users\Octa\Documents\Laboratoare Anul II\MAP\Laborator 11\Laborator 11\obj\Debug\net8.0\ref\Laborator 11.dll

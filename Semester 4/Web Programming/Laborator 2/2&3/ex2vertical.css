@@ -1,0 +1,51 @@
+body, html {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.stilHeader {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.stilDivMare {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.stilMenu {
+    background-color: yellow;
+    display: block;
+    padding: 0;
+    width: 15%;
+    margin: 0;
+    flex-direction: row;
+}
+.stilMenu li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.stilDiv {
+    background-color: green;
+    width: 85%;
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.stilFooter {
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-top: auto;
+}

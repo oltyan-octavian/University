@@ -1,0 +1,53 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  
+     7                                  segment data use32 class=data
+     8 00000000 785601124D3C2C1A76-         s dd 12015678h, 1A2C3C4Dh, 98FCDC76h
+     8 00000009 DCFC98             
+     9                                      len equ ($-s)/4
+    10 0000000C 00<rept>                    d times len db 0
+    11                                      
+    12                                  ;8. Se da un sir de dublucuvinte. Sa se obtina sirul format din octetii inferiori ai
+    13                                  ;   cuvintelor superioare din elementele sirului de dublucuvinte care sunt palindrom in scrierea in baza 10.
+    14                                  segment code use32 class=code
+    15                                      start:
+    16 00000000 B903000000                  mov ecx, len
+    17 00000005 BE[00000000]                mov esi, s
+    18 0000000A BF[0C000000]                mov edi, d
+    19 0000000F FC                          cld
+    20 00000010 E32E                        jecxz final
+    21                                      repeta:
+    22 00000012 66AD                            lodsw
+    23 00000014 66AD                            lodsw   ; ax = high word
+    24 00000016 B400                            mov ah, 0
+    25 00000018 88C6                            mov dh, al  ; dh - copia lui al
+    26 0000001A B364                            mov bl, 100d
+    27 0000001C F6F3                            div bl  ; al = cifra sutelor, ah = restul
+    28 0000001E 88C2                            mov dl, al  ; dl - cifra sutelor
+    29 00000020 88E0                            mov al, ah
+    30 00000022 B400                            mov ah, 0
+    31 00000024 B30A                            mov bl, 10d
+    32 00000026 F6F3                            div bl  ; al = cifra zecilor, ah = cifra unitatilor
+    33 00000028 80FA00                          cmp dl, 0
+    34 0000002B 7406                            je doua_cifre
+    35 0000002D 38E2                            cmp dl, ah
+    36 0000002F 750D                            jne next
+    37 00000031 7408                            je copy
+    38                                          doua_cifre:
+    39 00000033 3C00                                cmp al, 0
+    40 00000035 7404                                je copy
+    41 00000037 38E0                                cmp al, ah
+    42 00000039 7503                                jne next
+    43                                          copy:
+    44 0000003B 8837                            mov [edi], dh
+    45 0000003D 47                              inc edi
+    46                                          next:
+    47 0000003E E2D2                            loop repeta
+    48                                          
+    49                                      
+    50                                      final:
+    51 00000040 6A00                        push dword 0
+    52 00000042 FF15[00000000]              call [exit]

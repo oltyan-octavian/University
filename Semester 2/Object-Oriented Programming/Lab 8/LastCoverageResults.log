@@ -1,0 +1,21 @@
+[2023-05-09 08:19:49] [info] Start Program:
+Path:"C:\Users\oltya\Documents\Laboratoare\OOP\Lab 8\x64\Debug\Lab 8.exe"
+Arguments:
+Working directory: "C:\Users\oltya\Documents\Laboratoare\OOP\Lab 8\"
+Modules: Selected: C:\Users\oltya\Documents\Laboratoare\OOP\Lab 8\x64\Debug\Lab 8.exe Excluded: 
+Sources: Selected: C:\Users\oltya\Documents\Laboratoare\OOP\Lab 8 Excluded: console.cpp tests.cpp 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\oltya\AppData\Local\Temp\33vwg3ev.gue 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2023-05-09 08:19:49] [info] Module: C:\Users\oltya\Documents\Laboratoare\OOP\Lab 8\x64\Debug\Lab 8.exe is selected because it matches selected pattern: C:\Users\oltya\Documents\Laboratoare\OOP\Lab 8\x64\Debug\Lab 8.exe
+[2023-05-09 08:19:49] [info] ----------------------------------------------------
+[2023-05-09 08:19:49] [info] Coverage binary generated in file: C:\Users\oltya\AppData\Local\Temp\33vwg3ev.gue
+[2023-05-09 08:19:49] [info] ----------------------------------------------------

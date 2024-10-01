@@ -1,0 +1,36 @@
+     1                                  bits 32 
+     2                                  
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                  
+    10                                  ; a,b,c,d - word
+    11                                  segment data use32 class=data
+    12 00000000 FF04                        a dw 1279
+    13 00000002 9C00                        b dw 156
+    14 00000004 7302                        c dw 627
+    15 00000006 910D                        d dw 3473
+    16                                  
+    17                                  ; (d-a)+(b+b+c)
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; d-a
+    21 00000000 66A1[00000000]                  mov ax, [a]
+    22 00000006 662905[06000000]                sub [d], ax
+    23                                          
+    24                                          ; b+b+c
+    25 0000000D 66A1[02000000]                  mov ax, [b]
+    26 00000013 660305[02000000]                add ax, [b]
+    27 0000001A 660305[04000000]                add ax, [c]
+    28                                          
+    29                                          ; (d-a)+(b+b+c)
+    30 00000021 660105[06000000]                add [d], ax
+    31                                          
+    32                                          
+    33                                          ; rezultatul se afla in d
+    34                                          
+    35 00000028 6A00                            push    dword 0      
+    36 0000002A FF15[00000000]                  call    [exit]       

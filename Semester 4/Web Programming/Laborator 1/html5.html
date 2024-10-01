@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <title>Achiziție Mașină</title>
+    </head>
+    <body>
+    <h1>Bine ati venit la Showroom!</h1>
+    <img src="poza.jpg" alt="Poza dealership" height="400" width="800">
+    <h2>Completați formularul următor pentru achiziționarea unei mașini!</h2>
+    <br>
+    <br>
+    <form>
+        <fieldset>
+            <legend><h3>Formular</h3></legend>
+        <table>
+            <tr>
+                <th colspan="4">Date Client</th>
+            </tr>
+            <tr>
+                <th><label for="nume">Nume</label></th>
+                <td><input type="text" id="nume" name="nume"></td>
+                <th><label for="prenume">Prenume</label></th>
+                <td><input type="text" id="prenume" name="prenume"></td>
+            </tr>
+            <tr>
+                <th><label for="data">Data nașterii</label></th>
+                <td><input type="text" id="data" name="data"></td>
+                <th><label>Gen</label></th>
+                <td>
+                    <input type="radio" id="m" name="gen" value="M" checked >
+                    <label for="m">M</label>
+                    <input type="radio" id="f" name="gen" value="F">
+                    <label for="f">F</label>
+                </td>
+            </tr>   
+            <tr>
+                <th>Adresă</th>
+                <td colspan="3"> 
+                <table>
+                    <tr>
+                        <th><label for="strada">Stradă</label></th>
+                        <td><input type="text" id="strada" name="strada"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="numar">Număr</label></th>
+                        <td><input type="text" id="numar" name="numar" size="5"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="oras">Oraș</label></th>
+                        <td><input type="text" id="oras" name="oras"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="judet">Județ</label></th>
+                        <td><input type="text" id="judet" name="judet"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="codpostal">Cod Poștal</label></th>
+                        <td><input type="text" id="codpostal" name="codpostal" size="6"></td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="numartelefon">Număr de telefon</label></th>
+                <td colspan="3"><input type="text" id="numartelefon" name="numartelefon" size="12"></td>
+            </tr>
+            <tr>
+                <th colspan="4"><a href="https://en.wikipedia.org/wiki/Car_dealership" target="_blank">Date Mașini</a></th>
+            </tr>
+            <tr>
+                <th>Mărci auto disponibile</th>
+                <td>
+                    <ol start="10">
+                        <li>BMW</li>
+                        <li>Mercedes-Benz</li>
+                        <li>Audi</li>
+                        <li>Volkswagen</li>
+                        <li>Dacia</li>
+                    </ol>
+                </td>
+                <th>Motorizări posibile</th>
+                <td>
+                    <ol type="i">
+                        <li>2.0 I4</li>
+                        <li>3.0 V6</li>
+                        <li>4.4 V8</li>
+                        <li>5.0 V10</li>
+                        <li>6.2 V12</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th>Culori disponibile</th>
+                <td>
+                    <ul>
+                        <li>Negru:
+                            <ul>
+                                <li>Negru mat</li>
+                                <li>Negru lucios</li>
+                            </ul>
+                    </li>
+                        <li>Maro</li>
+                        <li>Alb</li>
+                        <li>Roșu:
+                            <ul>
+                                <li>Roșu trandafir</li>
+                                <li>Roșu cărămiziu</li>
+                            </ul>
+                        </li>
+                        <li>Gri</li>
+                    </ul>
+                </td>
+                <th>Dealeri</th>
+                <td>
+                    <ul>
+                        <li>București</li>
+                        <li>Brașov</li>
+                        <li>Cluj-Napoca</li>
+                        <li>Constanța</li>
+                        <li>Timișoara</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="marcaauto">Marca auto</label></th>
+                <td>
+                    <select name="marcaauto" id="marcaauto">
+                        <option value="bmw">BMW</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                        <option value="audi">Audi</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="dacia">Dacia</option>
+                    </select>
+                </td>
+                <th><label for="motorizare">Motorizare</label></th>
+                <td>
+                    <select name="motorizare" id="motorizare">
+                        <option value="i4">2.0 I4</option>
+                        <option value="v6">3.0 V6</option>
+                        <option value="v8">4.4 V8</option>
+                        <option value="v10">5.0 V10</option>
+                        <option value="v12">6.2 V12</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="culori">Culori disponibile</label></th>
+                <td>
+                    <select name="culori" id="culori">
+                        <option value="negrumat">Negru Mat</option>
+                        <option value="negrulucios">Negru Lucios</option>
+                        <option value="maro">Maro</option>
+                        <option value="alb">Alb</option>
+                        <option value="rosutrandafir">Rosu Trandafir</option>
+                        <option value="gri">Gri</option>
+                    </select>
+                </td>
+                <th><label for="dealeri">Dealeri</label></th>
+                <td>
+                    <select name="dealeri" id="dealeri">
+                        <option value="bucuresti">București</option>
+                        <option value="brasov">Brașov</option>
+                        <option value="cluj">Cluj-Napoca</option>
+                        <option value="constanta">Constanța</option>
+                        <option value="timisoara">Timișoara</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="Trimiteti!">
+                </td>
+            </tr>
+        </table>
+        </fieldset>
+    </form>
+    </body>
+</html>

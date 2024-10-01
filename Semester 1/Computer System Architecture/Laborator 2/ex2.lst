@@ -1,0 +1,28 @@
+     1                                  bits 32 
+     2                                  
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                  
+    10                                  ; a - byte, b - word, c - double word, d - qword - Interpretare fara semn
+    11                                  segment data use32 class=data
+    12 00000000 09                          a db 9
+    13 00000001 0600                        b dw 6
+    14 00000003 03000000                    c dd 3
+    15 00000007 0A00000000000000            d dq 10
+    16                                  
+    17                                  ; (a+d)-(c-b)+c
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; a+d
+    21 00000000 B800000000                      mov eax, 0
+    22 00000005 A0[00000000]                    mov al, [a]
+    23 0000000A BA00000000                      mov edx, 0
+    24                                          add edx:eax, [d]
+    24          ******************       error: invalid combination of opcode and operands
+    25                                          
+    26 0000000F 6A00                            push dword 0      
+    27 00000011 FF15[00000000]                  call [exit]       

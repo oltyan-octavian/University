@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="501.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.iss2024.laborator5iss.controller.UserWindowController">
+   <children>
+      <BorderPane prefHeight="501.0" prefWidth="757.0">
+         <top>
+            <Label alignment="CENTER" text="User Window" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" top="30.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="tableView" maxWidth="600.0" minWidth="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="titleColumn" prefWidth="150.0" text="Title" />
+                <TableColumn fx:id="authorColumn" prefWidth="150.0" text="Author" />
+                  <TableColumn fx:id="publishingHouseColumn" prefWidth="150.0" text="Publishing House" />
+                  <TableColumn fx:id="yearColumn" prefWidth="150.0" text="Year" />
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#rentBook" text="Rent Books" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

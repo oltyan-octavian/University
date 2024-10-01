@@ -1,0 +1,44 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit, scanf, printf
+     5                                  import exit msvcrt.dll
+     6                                  import scanf msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  
+     9                                  segment data use32 class=data
+    10 00000000 256400                      format db "%d", 0
+    11 00000003 257800                      format2 db "%x", 0
+    12 00000006 00000000                    n dd 0
+    13 0000000A 4461746920756E206E-         mesaj db "Dati un numar in baza 10: ", 0
+    13 00000013 756D617220696E2062-
+    13 0000001C 617A612031303A2000 
+    14 00000025 4E756D6172756C2069-         mesaj2 db "Numarul introdus in baza 16 este: ", 0
+    14 0000002E 6E74726F6475732069-
+    14 00000037 6E2062617A61203136-
+    14 00000040 20657374653A2000   
+    15                                      
+    16                                      
+    17                                  ; 17. Sa se citeasca de la tastatura un numar in baza 10 si sa se afiseze valoarea acelui numar in baza 16.
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ;citim nr
+    21 00000000 68[0A000000]                    push dword mesaj  ; punem parametrul pe stiva
+    22 00000005 FF15[00000000]          		call [printf]       ; apelam functia printf
+    23 0000000B 83C404                  		add esp, 4 * 1     ; eliberam parametrii de pe stiva
+    24 0000000E 68[06000000]                    push dword n       ; punem parametrii pe stiva de la dreapta la stanga
+    25 00000013 68[00000000]            		push dword format
+    26 00000018 FF15[00000000]          		call [scanf]       ; apelam functia scanf pentru citire
+    27 0000001E 83C408                  		add esp, 4 * 2     ; eliberam parametrii de pe stiva
+    28                                          
+    29                                          ;afisam nr
+    30 00000021 68[25000000]                    push dword mesaj2  ; punem parametrul pe stiva
+    31 00000026 FF15[00000000]          		call [printf]       ; apelam functia printf
+    32 0000002C 83C404                  		add esp, 4 * 1     ; eliberam parametrii de pe stiva
+    33 0000002F FF35[06000000]                  push dword [n]  ; punem parametrii pe stiva de la dreapta la stanga
+    34 00000035 68[03000000]            		push dword format2  
+    35 0000003A FF15[00000000]          		call [printf]       ; apelam functia printf
+    36 00000040 83C408                  		add esp, 4 * 2     ; eliberam parametrii de pe stiva
+    37                                          
+    38 00000043 6A00                            push dword 0        ; push the parameter for exit onto the stack
+    39 00000045 FF15[00000000]                  call [exit]         ; call exit to terminate the program

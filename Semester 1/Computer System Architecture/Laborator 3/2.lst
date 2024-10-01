@@ -1,0 +1,40 @@
+     1                                  bits 32 
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  
+     6                                  extern exit               
+     7                                  import exit msvcrt.dll    
+     8                                  
+     9                                  ;a - byte, b - word, c - double word, d - qword - Interpretare cu semn
+    10                                  segment data use32 class=data
+    11 00000000 01                          a db 1
+    12 00000001 0100                        b dw 1
+    13 00000003 05000000                    c dd 5
+    14 00000007 0100000000000000            d dq 1
+    15 0000000F <res 00000004>              x resd 1
+    16                                      
+    17                                  ; 14. c-b-(a+a)-b
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; (a+a)
+    21 00000000 A0[00000000]                    mov al, [a]
+    22 00000005 0205[00000000]                  add al, [a]
+    23 0000000B 88C3                            mov bl, al      ; rezultatul va fi in bl
+    24                                          
+    25 0000000D A1[03000000]                    mov eax, [c]
+    26 00000012 A3[0F000000]                    mov [x], eax
+    27 00000017 66A1[01000000]                  mov ax, [b]
+    28 0000001D 98                              cwde
+    29 0000001E 2905[0F000000]                  sub [x], eax
+    30 00000024 88D8                            mov al, bl
+    31 00000026 6698                            cbw
+    32 00000028 98                              cwde
+    33 00000029 2905[0F000000]                  sub [x], eax
+    34 0000002F 66A3[01000000]                  mov [b], ax
+    35 00000035 98                              cwde
+    36 00000036 2905[0F000000]                  sub [x], eax    ; rezultatul va fi in x
+    37                                          
+    38                                          
+    39 0000003C 6A00                            push    dword 0      
+    40 0000003E FF15[00000000]                  call    [exit]       

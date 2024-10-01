@@ -1,0 +1,34 @@
+     1                                  bits 32 
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  
+     6                                  extern exit               
+     7                                  import exit msvcrt.dll    
+     8                                  
+     9                                  ;a - byte, b - word, c - double word, d - qword - Interpretare fara semn
+    10                                  segment data use32 class=data
+    11 00000000 0C                          a db 12
+    12 00000001 0F00                        b dw 15
+    13 00000003 0C000000                    c dd 12
+    14 00000007 0F00000000000000            d dq 15
+    15 0000000F <res 00000008>              x resq 1
+    16                                      
+    17                                  ; 14. (a+d)-(c-b)+c
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; (a+d)
+    21 00000000 B800000000                      mov eax, 0
+    22 00000005 BA00000000                      mov edx, 0
+    23 0000000A A0[00000000]                    mov al, [a]     ; edx:eax = a
+    24 0000000F 8B1D[07000000]                  mov ebx, [d]
+    25 00000015 8B0D[0B000000]                  mov ecx, [d+4]  ; ecx:ebx = d
+    26 0000001B 01D8                            add eax, ebx
+    27 0000001D 11CA                            adc edx, ecx    ; edx:eax = a+data
+    28 0000001F 52                              push edx
+    29 00000020 50                              push eax
+    30                                          pop qword [x]
+    30          ******************       error: instruction not supported in 32-bit mode
+    31                                          
+    32 00000021 6A00                            push    dword 0      
+    33 00000023 FF15[00000000]                  call    [exit]       

@@ -1,0 +1,13 @@
+.myDiv {
+  display: flex;
+  padding: 40px;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.hor {
+  display: flex;
+  justify-content: horizontal;
+}

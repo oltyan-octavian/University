@@ -1,0 +1,13 @@
+.root {
+    -fx-background-color: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.text-field{
+    -fx-background-color: white;
+}
+.label{
+    -fx-text-fill: white;
+}
+.button{
+    -fx-background-color: linear-gradient(to top, #5674ac 0%, #9badbd 100%);
+    -fx-text-fill: white;
+}

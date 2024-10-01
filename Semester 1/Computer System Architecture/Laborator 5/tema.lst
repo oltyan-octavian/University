@@ -1,0 +1,59 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  extern exit
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  ;19. Se dau 2 siruri de octeti A si B. 
+     9                                  ;Sa se construiasca sirul R care sa contina doar elementele pare si negative din cele 2 siruri.
+    10                                  segment data use32 class=data
+    11 00000000 020103FDFC02FA              a db 2, 1, 3, -3, -4, 2, -6
+    12                                      lena equ $-a
+    13 00000007 0405FB07FAFE01              b db 4, 5, -5, 7, -6, -2, 1
+    14                                      lenb equ $-b
+    15 0000000E 00<rept>                    r times lena+lenb db 0
+    16                                  
+    17                                  segment code use32 class=code
+    18                                      start:
+    19                                          ;parcurgem sirul a
+    20 00000000 B907000000                      mov ecx, lena
+    21 00000005 BE[00000000]                    mov esi, a
+    22 0000000A BF[0E000000]                    mov edi, r
+    23 0000000F E310                            jecxz finala
+    24                                          repetarea:
+    25 00000011 8A1E                                mov bl, [esi]
+    26 00000013 8A06                                mov al, [esi]
+    27 00000015 2481                                and al, 10000001
+    27          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    28 00000017 3C80                                cmp al, 10000000
+    28          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    29 00000019 7503                                jne nexta
+    30 0000001B 881F                                mov [edi], bl
+    31 0000001D 47                                  inc edi
+    32                                              nexta:
+    33 0000001E 46                                      inc esi
+    34 0000001F E2F0                                    loop repetarea
+    35                                          finala:
+    36                                          
+    37                                          ;parcurgem sirul b
+    38 00000021 B907000000                      mov ecx, lenb
+    39 00000026 BE[07000000]                    mov esi, b
+    40 0000002B E310                            jecxz finalb
+    41                                          repetareb:
+    42 0000002D 8A1E                                mov bl, [esi]
+    43 0000002F 8A06                                mov al, [esi]
+    44 00000031 2481                                and al, 10000001
+    44          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    45 00000033 3C80                                cmp al, 10000000
+    45          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    46 00000035 7503                                jne nextb
+    47 00000037 881F                                mov [edi], bl
+    48 00000039 47                                  inc edi
+    49                                              nextb:
+    50 0000003A 46                                      inc esi
+    51 0000003B E2F0                                    loop repetareb
+    52                                          finalb:
+    53                                          
+    54 0000003D 6A00                            push dword 0
+    55 0000003F FF15[00000000]                  call [exit]

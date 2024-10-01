@@ -1,0 +1,48 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start
+     4                                  
+     5                                  extern exit
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  ;4. Se da octetul A. Sa se obtina numarul intreg n reprezentat de bitii 2-4 ai lui A. 
+     9                                  ;Sa se obtina apoi in B octetul rezultat prin rotirea spre dreapta a lui A cu n pozitii. 
+    10                                  ;Sa se obtina dublucuvantul C:
+    11                                  ;bitii 8-15 ai lui C sunt 0
+    12                                  ;bitii 16-23 ai lui C coincid cu bitii lui B
+    13                                  ;bitii 24-31 ai lui C coincid cu bitii lui A
+    14                                  ;bitii 0-7 ai lui C sunt 1
+    15                                  
+    16                                  segment data use32 class=data
+    17 00000000 95                          a db 10010101b
+    18 00000001 00                          b db 0
+    19 00000002 00000000                    c dd 0
+    20                                  
+    21                                  segment code use32 class=code
+    22                                      start:
+    23 00000000 A0[00000000]                    mov al, [a]
+    24 00000005 241C                            and al, 00011100b
+    25 00000007 B102                            mov cl, 2
+    26 00000009 D2C8                            ror al, cl
+    27 0000000B 88C1                            mov cl, al
+    28 0000000D 8A1D[00000000]                  mov bl, [a]
+    29 00000013 D2CB                            ror bl, cl
+    30 00000015 881D[01000000]                  mov [b], bl
+    31 0000001B B800000000                      mov eax, 0
+    32 00000020 BB00000000                      mov ebx, 0
+    33 00000025 8A1D[00000000]                  mov bl, [a]
+    34 0000002B 09D8                            or eax, ebx
+    35 0000002D B108                            mov cl, 8
+    36 0000002F D3C0                            rol eax, cl
+    37 00000031 BB00000000                      mov ebx, 0
+    38 00000036 8A1D[01000000]                  mov bl, [b]
+    39 0000003C 09D8                            or eax, ebx
+    40 0000003E B110                            mov cl, 16
+    41 00000040 D3C0                            rol eax, cl
+    42 00000042 0DFF000000                      or eax, 00000000000000000000000011111111b
+    43 00000047 A3[02000000]                    mov [c], eax
+    44                                          
+    45                                          
+    46 0000004C 6A00                            push dword 0
+    47 0000004E FF15[00000000]                  call [exit]
+    48                                      

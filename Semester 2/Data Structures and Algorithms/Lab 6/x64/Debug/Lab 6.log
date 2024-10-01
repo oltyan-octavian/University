@@ -1,0 +1,8 @@
+﻿  IteratorMDO.cpp
+  MDO.cpp
+  TestExtins.cpp
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 6\TestExtins.cpp(119,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 6\TestExtins.cpp(137,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  TestScurt.cpp
+  Generating Code...
+  Lab 6.vcxproj -> C:\Users\oltya\Documents\Laboratoare\SDA\Lab 6\x64\Debug\Lab 6.exe

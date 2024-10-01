@@ -1,0 +1,10 @@
+1,2022-01-30,Utilities
+2,2022-01-15,Groceries
+3,2022-03-10,Fashion
+4,2022-04-05,Entertainment
+5,2022-05-20,Electronics
+6,2022-06-15,Utilities
+7,2022-07-01,Groceries
+8,2022-08-25,Fashion
+9,2022-09-10,Entertainment
+10,2022-10-15,Electronics

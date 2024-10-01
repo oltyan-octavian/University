@@ -1,0 +1,55 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  
+     7                                  segment data use32 class=data
+     8 00000000 07563412153C2B1A            s dd 12345607h, 1A2B3C15h
+     9                                      len equ $-s
+    10 00000008 00<rept>                    d times len db 0
+    11                                  
+    12                                  ;14. Se da un sir S de dublucuvinte.
+    13                                  ;Sa se obtina sirul D format din octetii dublucuvintelor din sirul S sortati in ordine crescatoare in interpretarea fara semn.
+    14                                  segment code use32 class=code
+    15                                      start:
+    16                                          ; mutam octetii din s in d
+    17 00000000 B908000000                      mov ecx, len
+    18 00000005 BE[00000000]                    mov esi, s
+    19 0000000A BF[08000000]                    mov edi, d
+    20 0000000F FC                              cld
+    21 00000010 E331                            jecxz final
+    22                                          repetare:
+    23 00000012 A4                                  movsb
+    24 00000013 E2FD                                loop repetare
+    25                                          
+    26                                          ;sortam sirul d
+    27 00000015 B908000000                      mov ecx, len
+    28 0000001A BE[08000000]                    mov esi, d
+    29 0000001F FC                              cld
+    30 00000020 E321                            jecxz final
+    31                                          parcurgere:
+    32 00000022 89CA                                mov edx, ecx
+    33 00000024 B908000000                          mov ecx, len
+    34 00000029 BF[08000000]                        mov edi, d
+    35 0000002E FC                                  cld
+    36                                              sortare:
+    37 0000002F A6                                      cmpsb
+    38 00000030 4E                                      dec esi
+    39 00000031 4F                                      dec edi
+    40 00000032 7707                                    ja next
+    41 00000034 8A07                                    mov al, [edi]
+    42 00000036 A4                                      movsb
+    43 00000037 4E                                      dec esi
+    44 00000038 4F                                      dec edi
+    45 00000039 8806                                    mov [esi], al
+    46                                                  next:
+    47 0000003B 47                                      inc edi
+    48 0000003C E2F1                                    loop sortare
+    49 0000003E 89D1                                mov ecx, edx
+    50 00000040 46                                  inc esi
+    51 00000041 E2DF                                loop parcurgere
+    52                                          final:
+    53                                          
+    54 00000043 6A00                            push dword 0        ; push the parameter for exit onto the stack
+    55 00000045 FF15[00000000]                  call [exit]         ; call exit to terminate the program

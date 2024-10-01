@@ -1,0 +1,8 @@
+﻿  IteratorMultime.cpp
+  Multime.cpp
+  TestExtins.cpp
+  TestScurt.cpp
+  Generating Code...
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 4\Multime.cpp(133): warning C4715: 'Multime::adauga': not all control paths return a value
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 4\Multime.cpp(169): warning C4715: 'Multime::sterge': not all control paths return a value
+  Lab 4.vcxproj -> C:\Users\oltya\Documents\Laboratoare\SDA\Lab 4\x64\Debug\Lab 4.exe

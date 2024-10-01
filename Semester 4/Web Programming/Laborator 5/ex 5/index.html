@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercitiul 5</title>
+<style>
+  .carousel {
+    position: relative;
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .carousel img {
+    display: block;
+    width: 40%;
+    height: 60%;
+    height: auto;
+  }
+
+  .carousel li {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .carousel li.active {
+    opacity: 1;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 5px; 
+  }
+
+  .button-container button {
+    margin: 0 5px; 
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="carousel">
+  <ol>
+    <li class="active">
+      <a href="https://www.google.com"><img src="carrot.jpg" alt="Image 1"></a>
+    </li>
+    <li>
+      <a href="https://www.google.com"><img src="potato.jpeg" alt="Image 2"></a>
+    </li>
+    <li>
+      <a href="https://www.google.com"><img src="tomato.jpeg" alt="Image 3"></a>
+    </li>
+  </ol>
+</div>
+
+<div class="button-container">
+    <button onclick="prevSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

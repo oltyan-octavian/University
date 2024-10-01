@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+      <FILENAME>vectordinamic.h</FILENAME>
+      <LINE>95</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'elems'.</DESCRIPTION>
+    <FUNCTION>VectDinNewDeleteT&lt;Activitate&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$VectDinNewDeleteT@VActivitate@@@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>91</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;ot.lg')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>29</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'i' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'i&lt;ot.lg')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'i' is an Output from 'Activitate::=' (declared at c:\users\oltya\documents\laboratoare\oop\lab 6\domain.h:66)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\oltya\Documents\Laboratoare\OOP\Lab 6\</FILEPATH>
+        <FILENAME>vectordinamic.h</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'elems[1]', (readable range is 0 to 0)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

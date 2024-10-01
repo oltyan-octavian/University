@@ -1,0 +1,83 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32216.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/main.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "2a904c3772bcda1955b6a7a0fcaaff67b3aae6c3ecec84f37f8327e7bf2ec0f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/console.h"
+          },
+          "hashes": {
+            "sha-256": "e7dd22ae70377bef7af795aad8427e0b02992b67e934477a908b1ea4fb3827d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/service.h"
+          },
+          "hashes": {
+            "sha-256": "bd343112651ac4d93ed1d94815237bdc6539e89e4a7dca048d689139b1b279e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/domain.h"
+          },
+          "hashes": {
+            "sha-256": "d0f0ff83b8ce3b299b4adf7d2f5abfe67b9a95d8c136f9a4125feab31aaca3a1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/repo.h"
+          },
+          "hashes": {
+            "sha-256": "1d25af1935d724cc37b6c749174f0883b68823ad597e005a43aba3a304922f54"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/validator.h"
+          },
+          "hashes": {
+            "sha-256": "341d479c6b71c708db1a3b27bc98ee40dfbdbf4243e584aee04e80e008b5fbfc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/oltya/documents/laboratoare/oop/lab 6/tests.h"
+          },
+          "hashes": {
+            "sha-256": "98ecdec998020757789620fed4000699e95b6ec7572ba535663cae6d211d64a7"
+          }
+        }
+      ]
+    }
+  ]
+}

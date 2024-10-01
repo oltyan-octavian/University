@@ -1,0 +1,12 @@
+﻿  Iterator.cpp
+  LO.cpp
+  TestExtins.cpp
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\TestExtins.cpp(85,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\TestExtins.cpp(100,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\TestExtins.cpp(114,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\TestExtins.cpp(124,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\TestExtins.cpp(227,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\TestExtins.cpp(276,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  TestScurt.cpp
+  Generating Code...
+  Lab 2.vcxproj -> C:\Users\oltya\Documents\Laboratoare\SDA\Lab 2\x64\Debug\Lab 2.exe
